@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New User</title>
+</head>
+<body>
+<form action="#" th:action="@{/}" th:object="${users}" method="post">
+    <input type="hidden" th:field="*{userid}" />
+    User Name :<input type="text" th:field="*{username}" />
+    <span th:if="${#fields.hasErrors('username')}"
+          th:errors="*{username}"></span><br/>
+
+    User Password :<input type="text" th:field="*{password}" />
+    <span th:if="${#fields.hasErrors('password')}"
+          th:errors="*{password}"></span><br/>
+    <button type="submit">Submit</button>
+</form>
+
+<!-- for the admin it will be a linking to the admin page with text saying "if you're an admin click here"
+</body>
+</html>
+
+
+</body>
+</html>
