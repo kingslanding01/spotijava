@@ -44,7 +44,7 @@ public class HomeController {
         if (result.hasErrors()){
             return "createuser";
         }
-        userRepository.save(user);
+        UserRepository.save(user);
         return "redirect:/transaction";
     }
 
@@ -85,7 +85,7 @@ public class HomeController {
         if (result.hasErrors()){
             return "validateuser";
         }
-        User inputpassword = userRepository.findById(id); // id for the user in user repository
+        User inputpassword = UserRepository.findById(id); // id for the user in user repository
         if (inputpassword.getPassword().equalsIgnoreCase(password.getPassword())){
             // If password matches
             return "transaction"; //start doing transactions after valid password and username

@@ -6,6 +6,8 @@ import java.util.Set;
 
 @Entity
 public class Album {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String albumname;
     private String year;

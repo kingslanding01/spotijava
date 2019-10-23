@@ -5,6 +5,8 @@ import java.util.Set;
 
 @Entity
 public class Transaction {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private double balance;
     private double deposit;

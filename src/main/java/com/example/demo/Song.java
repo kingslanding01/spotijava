@@ -1,12 +1,11 @@
 package com.example.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Song {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String songname;
     private String artistname;
