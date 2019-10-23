@@ -33,7 +33,7 @@
 <h1>Home Page</h1>
 
 <form action="#" th:action="@{/homepage}" th:object="${user}" method="post">
-    <input type="hidden th:field=*{userid}" />
+    <input type="hidden" th:field="*{userid}" />
     User Name :<input type="text" th:field="*{username}" />
     <span th:if="${#fields.hasErrors('username')}"
           th:errors="*{username}"></span><br />
